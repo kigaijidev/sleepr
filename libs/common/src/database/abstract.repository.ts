@@ -32,7 +32,7 @@ export abstract class AbstractRepository<TDocument extends AbstractDocument> {
 		return document;
 	}
 
-	async findOneAnđUpate(
+	async findOneAndUpate(
 		filterQuery: FilterQuery<TDocument>,
 		update: UpdateQuery<TDocument>,
 	): Promise<TDocument> {
