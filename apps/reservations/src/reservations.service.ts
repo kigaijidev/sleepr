@@ -5,7 +5,9 @@ import { ReservationsRepository } from './reservations.repository';
 
 @Injectable()
 export class ReservationsService {
-	constructor(private readonly reservationsRepository: ReservationsRepository) {}
+	constructor(
+		private readonly reservationsRepository: ReservationsRepository,
+	) {}
 
 	create(createReservationDto: CreateReservationDto) {
 		return this.reservationsRepository.create({

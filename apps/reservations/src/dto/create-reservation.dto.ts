@@ -1,7 +1,21 @@
+import { IsDate, IsString } from 'class-validator';
+import { Type } from 'class-transformer';
+
 export class CreateReservationDto {
-    startDate: Date;
-    endDate: Date;
-    userId: string;
-    placeId: string;
-    invoiceId: string;
+	@IsDate()
+	@Type(() => Date)
+	startDate: Date;
+
+	@IsDate()
+	@Type(() => Date)
+	endDate: Date;
+
+	@IsString()
+	userId: string;
+
+	@IsString()
+	placeId: string;
+
+	@IsString()
+	invoiceId: string;
 }
