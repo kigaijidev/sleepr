@@ -10,6 +10,14 @@ services:
     volumes:
       - .:/usr/src/app
       - /usr/src/app/node_modules
+  auth:
+    build: 
+      context: .
+      dockerfile: ./apps/auth/Dockerfile
+      target: development
+    command: pnpm run start:dev auth
+    ports:
+      - '3001:3001'
   mongo:
     image: mongo
     restart: always
