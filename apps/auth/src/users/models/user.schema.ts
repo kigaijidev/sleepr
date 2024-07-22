@@ -13,5 +13,4 @@ export class UserDocument extends AbstractDocument {
 	password: string;
 }
 
-export const UserSchema =
-	SchemaFactory.createForClass(UserDocument);
+export const UserSchema = SchemaFactory.createForClass(UserDocument);

@@ -7,14 +7,14 @@ import { LoggerModule } from 'nestjs-pino';
 import { UsersRepository } from './users.repository';
 
 @Module({
-  imports: [
-    DatabaseModule,
+	imports: [
+		DatabaseModule,
 		DatabaseModule.forFeature([
 			{ name: UserDocument.name, schema: UserSchema },
 		]),
-  ],
-  controllers: [UsersController],
-  providers: [UsersService, UsersRepository],
-  exports: [UsersService],
+	],
+	controllers: [UsersController],
+	providers: [UsersService, UsersRepository],
+	exports: [UsersService],
 })
 export class UsersModule {}
